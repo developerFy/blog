@@ -1,0 +1,23 @@
+---
+import Navigation from '../components/Navigation.astro'
+import '../styles/global.css'
+
+const startText = 'Blog Page, start';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<Navigation />
+		<h1>{startText}</h1>
+    <ul>
+      <li><a href="/posts/1">文章 1</a></li>
+      <li><a href="/posts/2">文章 2</a></li>
+    </ul>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+---
+const {githubName} = Astro.props;
+---
+
+<footer>
+    <p>github:
+        <a href={`https://www.github.com/${githubName}`}>
+            github
+        </a>
+    </p>
+</footer>
+
+<style>
+    a {
+        padding: 0.5rem 1rem;
+        color: white;
+        background-color: #4c1d95;
+        text-decoration: none;
+    }
+</style>
