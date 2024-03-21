@@ -3,14 +3,20 @@ const {githubName} = Astro.props;
 ---
 
 <footer>
-    <p>github:
+    this is footer area
+    <p>
         <a href={`https://www.github.com/${githubName}`}>
-            github
+            github ➡️
         </a>
     </p>
 </footer>
 
 <style>
+    footer {
+        margin-top: 20px;
+        border: 1px silver dashed;
+        padding: 10px;
+    }
     a {
         padding: 0.5rem 1rem;
         color: white;

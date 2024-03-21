@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import Navigation from "../components/Navigation.astro";
 
 const {pageTitle} = Astro.props
 ---
@@ -14,9 +14,9 @@ const {pageTitle} = Astro.props
     <title>{pageTitle}</title>
 </head>
 <body>
-<Header />
+<Navigation></Navigation>
 <slot></slot>
-<Footer />
+<Footer githubName="developerFy" />
 <script>
     import "../scripts/menu.js";
 </script>

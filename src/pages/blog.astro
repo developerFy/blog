@@ -1,31 +1,20 @@
 ---
-import Navigation from '../components/Navigation.astro'
 import BlogPost from '../components/BlogPost.astro';
 import '../styles/global.css'
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const startText = 'Blog Page';
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
-
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="generator" content={Astro.generator}/>
-</head>
-<body>
-<Navigation/>
-<h1>{startText}</h1>
-<ul>
-    {
+<BaseLayout pageTitle="Blogs">
+    <h1>{startText}</h1>
+    <ul>
+      {
         allPosts.map(
-            posts => {
-                return <BlogPost url={posts.url} title={posts.frontmatter.title} />;
-            }
-
+          posts => {
+            return <BlogPost url={posts.url} title={posts.frontmatter.title}/>;
+          }
         )
-    }
-</ul>
-</body>
-</html>
+      }
+    </ul>
+</BaseLayout>

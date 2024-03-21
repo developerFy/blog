@@ -1,6 +1,6 @@
 ### tips
 
-=> 教程进度4.1
+=> 基础教程进度 Finish
 
 1、pages 目录下的文件会自动创建 `router`， 以供访问
 2、css style 可以使用 `frontmatter`  中的变量
@@ -44,3 +44,7 @@ const textSize = 12
         - 对象中的 `params` 属性直接匹配到浏览器地址栏中的 `[]` 中的值，在 `frontmatter`
           中（除了函数内部）可以通过 `Astro.params` 获取
         - 对象中的 `props` 属性则可以通过 `Astro.props` 获取
+
+6、 rss 订阅
+
+> 按照流程即可：https://docs.astro.build/zh-cn/tutorial/5-astro-api/4/

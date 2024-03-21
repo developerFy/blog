@@ -1,33 +1,22 @@
 ---
 import '../styles/global.css'
-import Navigation from '../components/Navigation.astro'
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
-const titleColor = 'purple'
+const skills = ['javascript/typescript', 'css/scss', 'JavaScript', 'vue', 'Astro']
+const listItemWeight = 'bold'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <style define:vars={{ titleColor }}>
-      h1 {
-        color: var(--titleColor);
-        font-size: 3rem;
-      }
-      .skill {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <Navigation />
-    <h1>关于我</h1>
+<BaseLayout pageTitle="About">
+    <h1>this is about page</h1>
     <ul>
-      {skills.map((el) => <li class="skill">{el}</li>)}
+      {skills.map(skillName =>
+              <li class="skill">{skillName}</li>)
+      }
     </ul>
-  </body>
-</html>
+</BaseLayout>
+
+<style define:vars={{listItemWeight}}>
+    .skill {
+        font-weight: var(--listItemWeight);
+    }
+</style>
